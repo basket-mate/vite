@@ -40,7 +40,15 @@ const ProductCard = ({
     }, [sortOption, item]);
 
     const handleCheckboxChange = (e) => {
-        onCheckboxChange(item.ingredient, e.target.checked);
+        const checked = e.target.checked;
+
+        if (checked) {
+            // 체크박스 선택 시, 추천 상품 또는 선택된 상품을 추가
+            onProductSelect(item.ingredient, selectedProduct || recommendedProduct);
+        } else {
+            // 체크박스 해제 시, 상태를 삭제
+            onCheckboxChange(item.ingredient, false);
+        }
     };
 
     return (
@@ -104,3 +112,4 @@ const ProductCard = ({
 };
 
 export default ProductCard;
+
