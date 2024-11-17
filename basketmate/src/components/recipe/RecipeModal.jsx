@@ -21,8 +21,8 @@ const RecipeModal = ({ isOpen, onClose, recipe }) => {
             overlayClassName="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
             style={{
                 content: {
-                    maxHeight: "80vh", // 모달의 최대 높이 설정
-                    overflowY: "auto", // 모달 내부 스크롤 활성화
+                    maxHeight: "80vh",
+                    overflowY: "auto",
                 },
             }}
         >
