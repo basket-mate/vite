@@ -11,7 +11,6 @@ function App() {
         <Routes>
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<SignUp />} />
-
           <Route element={<PrivateRoute />}>
             <Route element={<Layout />}>
               <Route path="/" element={<Home />} />
